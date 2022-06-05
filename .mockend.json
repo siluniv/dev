@@ -3,7 +3,9 @@
     "users": {
       "hasMany": "User"
     },
-    "id": "1",
+    "id": {
+      "regexp": "[a-z0-9]{25,30}"
+    },
     "name": {
       "regexp": "[A-Z][a-z]{5,10}"
     },
@@ -19,7 +21,11 @@
         "maxLength": 80
       }
     },
-    "url": "partner_url_test"
+    "url": {
+      "string": [
+        "user_url_test"
+      ]
+    }
   },
   "User": {
     "partner": {
@@ -28,7 +34,9 @@
     "posts": {
       "hasMany": "Post"
     },
-    "id": "1",
+    "id": {
+      "regexp": "[a-z0-9]{25,30}"
+    },
     "name": {
       "regexp": "[A-Z][a-z]{5,10}"
     },
@@ -38,39 +46,52 @@
     "email": {
       "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}"
     },
-    "profile_image": null,
-    "cover_image": null,
-    "bio": "",
-    "website": null,
-    "location": null,
-    "facebook": null,
-    "twitter": null,
-    "meta_title": null,
-    "meta_description": null,
-    "instagram": null,
-    "url": "user_url_test"
+    "profile_image": {
+      "regexp": "https://picsum\\.photos/seed/[a-z0-9]{5}/100"
+    },
+    "url": {
+      "string": [
+        "user_url_test"
+      ]
+    }
   },
   "Post": {
     "author": {
       "belongsTo": "Post"
     },
-    "id": "628f2858afa2b40014088397",
-    "uuid": "d328c009-1735-4356-8eb3-0626e7243dcc",
+    "id": {
+      "regexp": "[a-z0-9]{25,30}"
+    },
+    "uuid": {
+      "regexp": "[a-z0-9-]{25,30}"
+    },
     "title": {
       "loremWords": {
         "minLength": 10,
         "maxLength": 20
       }
     },
-    "slug": "[a-z0-9-]{15,40}",
-    "html": "",
-    "comment_id": "",
+    "slug": {
+      "regexp": "[a-z0-9-]{20}"
+    },
+    "html": {
+      "loremParagraphs": { "minLength": 200, "maxLength": 500 }
+    },
+    "comment_id": {
+      "regexp": "[a-z0-9]{25,30}"
+    },
     "feature_image": {
       "regexp": "https://picsum\\.photos/seed/[a-z0-9]{5}/700/300"
     },
-    "featured": false,
-    "visibility": "public",
-    "email_recipient_filter": "none",
+    "featured": {
+      "boolean": {}
+    },
+    "visibility": {
+      "string": [
+        "public",
+        "private"
+      ]
+    },
     "created_at": {
       "dateTime": {
         "min": "2022-01-01T00:00:00Z",
@@ -90,30 +111,29 @@
       }
     },
     "custom_excerpt": null,
-    "codeinjection_head": null,
-    "codeinjection_foot": null,
-    "custom_template": null,
     "canonical_url": null,
-    "comment_read_permission": "setting",
-    "comment_write_permission": "setting",
-    "comment_count": 0,
-    "option_type": null,
-    "option_sort": null,
-    "option_value": "{}",
-    "url": "post_url_test",
-    "excerpt": "",
-    "reading_time": 3,
-    "access": true,
-    "send_email_when_published": false,
-    "og_image": null,
-    "og_title": null,
-    "og_description": null,
-    "twitter_image": null,
-    "twitter_title": null,
-    "twitter_description": null,
-    "meta_title": null,
-    "meta_description": null,
-    "email_subject": null,
-    "frontmatter": null
+    "comment_count": {
+      "int": {
+        "min": 0,
+        "max": 5000
+      }
+    },
+    "url": {
+      "string": [
+        "post_url_test"
+      ]
+    },
+    "excerpt": {
+      "loremSentences": { "minLength": 100, "maxLength": 200 }
+    },
+    "reading_time": {
+      "int": {
+        "min": 3,
+        "max": 15
+      }
+    },
+    "access": {
+      "boolean": {}
+    }
   }
 }
