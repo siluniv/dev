@@ -1,0 +1,36 @@
+{
+  "partners": [
+    {
+      "id": 1,
+      "name": "오터레터",
+      "slug": "otterletter",
+      "description": "테크와 국제정치, 문화를 다루는 온라인 매거진",
+      "logo": "https://picsum.photos/seed/otterletter/200",
+      "url": "https://otterletter.com/"
+    },
+    {
+      "id": 2,
+      "name": "Exciting f(x)",
+      "slug": "excitingfx",
+      "description": "디지털 전환의 소용돌이에서 각 산업 영역을 분석하고 변화의 방향을 살펴봅니다.",
+      "logo": "https://picsum.photos/seed/excitingfx/200",
+      "url": "https://excitingfx.kr/"
+    },
+    {
+      "id": 3,
+      "name": "C-Rocket",
+      "slug": "crocket",
+      "description": "디지털 시대, 테크와 뉴미디어를 이야기하는 새로운 정보 커뮤니티",
+      "logo": "https://picsum.photos/seed/crocket/200",
+      "url": "https://c-rocket.net/"
+    },
+    {
+      "id": 4,
+      "name": "Mediagotosa",
+      "slug": "mediagotosa",
+      "description": "미디어를 고민하고, 토론하고, 사랑하는 사람들의 정보 창고",
+      "logo": "https://picsum.photos/seed/mediagotosa/200",
+      "url": "https://mediagotosa.com/"
+    }
+  ]
+}
